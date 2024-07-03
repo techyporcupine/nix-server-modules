@@ -5,6 +5,9 @@
   services = {
     jellyfin = {
       enable = true;
+      # We are simply doing this so that Jellyfin has access to all the directories that you normally would. If you already had Jellyfin previously, you may need to change the ownership of `/var/lib/jellyfin` and `/var/cache/jellyfin`
+      user = "yourusername";
+      group = "users";
     };
   };
 }
